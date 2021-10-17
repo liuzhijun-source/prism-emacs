@@ -33,7 +33,6 @@
 (require 'init-ui)
 (require 'init-default)
 (require 'init-company)
-(require 'init-awesome-pair)
 (require 'init-ivy)
 (require 'init-flycheck)
 (require 'init-treemacs)

@@ -7,6 +7,9 @@
 ;; Backup
 (setq make-backup-files nil)
 
+;; Electric pair mode
+(electric-pair-mode t)
+
 ;; Show paren mode
 (show-paren-mode 1)
 (define-advice show-paren-function (:around (fn) fix-show-paren-function)
@@ -15,6 +18,7 @@
 	(t (save-excursion
 	     (ignore-errors (backward-up-list))
 	     (funcall fn)))))
+
 
 ;; Hippie
 (setq hippie-expand-try-function-list '(try-expand-debbrev
