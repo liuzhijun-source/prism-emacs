@@ -16,12 +16,13 @@
   :ensure t
   :hook (after-init . doom-modeline-mode))
 
-;; Line number
+;; emacs config
 (use-package emacs
   :config
   (setq display-line-numbers-type t)
   (global-display-line-numbers-mode t)
-  (set-face-attribute 'default nil :font "等距更纱黑体 SC 11"))
+  ;; set your font here
+  ;; (set-face-attribute 'default nil :font "Source Code Pro 10")) 
 
 (provide 'init-ui)
 
