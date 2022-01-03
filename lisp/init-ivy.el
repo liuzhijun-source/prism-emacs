@@ -1,7 +1,3 @@
-;;; package --- Summary
-;;; Commentary:
-;;; Code:
-
 (use-package ivy
   :defer 1
   :demand
@@ -12,10 +8,11 @@
         ivy-initial-inputs-alist nil
         ivy-count-format "%d/%d "
         enable-recursive-minibuffers t
-        ivy-re-builders-alist '((t . ivy--regex-ignore-order))))
+        ivy-re-builders-alist '((t . ivy--regex-ignore-order))
+	ivy-height 15))
 
 (use-package counsel
-  :after (ivy)
+  :after ivy
   :bind (("M-x" . counsel-M-x)
          ("C-x C-f" . counsel-find-file)
          ("C-c f" . counsel-recentf)
@@ -29,13 +26,14 @@
                 swiper-include-line-number-in-search t))
 
 (use-package all-the-icons-ivy-rich
+  :after ivy
   :ensure t
   :init (all-the-icons-ivy-rich-mode 1))
 
 (use-package ivy-rich
+  :after ivy
   :ensure t
   :init (ivy-rich-mode 1))
 
-(provide 'init-ivy)
 
-;;; init-ivy.el ends here
+(provide 'init-ivy)
